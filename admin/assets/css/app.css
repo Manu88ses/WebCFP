@@ -1,0 +1,98 @@
+/* =========================
+   Variables & Base
+========================= */
+:root{
+  --brand: #2a7ae2;
+  --bg:    #f6f8fb;
+  --ink:   #111;
+  --card:  #fff;
+  --line:  #e5e7eb;
+  --radius: 12px;
+  --shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+
+*,
+*::before,
+*::after{ box-sizing: border-box; }
+
+html, body{ height: 100%; }
+
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  /* Sticky footer layout */
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* El <main> ocuparà l'espai disponible perquè el footer quedi a baix */
+main{ flex: 1; }
+
+/* =========================
+   Layout
+========================= */
+.container{
+  width: min(1100px, 96%);
+  margin-inline: auto;
+  padding-inline: 0; /* net */
+}
+
+header,
+footer{
+  background: var(--card);
+  border-bottom: 1px solid var(--line);
+}
+
+header .container,
+footer .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+/* Si vols una línia només al header i no al footer, elimina la del footer: */
+footer{ border-top: 1px solid var(--line); border-bottom: 0; }
+
+/* =========================
+   Tipografia
+========================= */
+h1, h2{
+  line-height: 1.2;
+  margin: .5rem 0;
+}
+
+/* =========================
+   Navegació
+========================= */
+nav a{
+  display: inline-block;
+  margin-right: 1rem;
+  color: #333;
+  text-decoration: none;
+}
+nav a:hover{ color: var(--brand); }
+
+/* =========================
+   Components
+========================= */
+.card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.btn{
+  display: inline-block;
+  padding: .6rem 1rem;
+  background: var(--brand);
+  color: #fff;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.btn:hover{ filter: brightness(.95); }
