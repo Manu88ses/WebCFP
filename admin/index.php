@@ -22,15 +22,16 @@ $current = $pages[$slug] ?? null;
 <body>
   <?php include __DIR__ . '/inc/header.php'; ?>
   <main class="container">
-    <?php if ($current && file_exists($current['file'])): ?>
-      <?php include $current['file']; ?>
-    <?php else: ?>
+    <?php 
+      if ($current && file_exists($current['file'])) {
+        include $current['file'];
+      } else { ?>
       <section class="card">
         <h1>404 — Pàgina no trobada</h1>
         <p>La pàgina que has sol·licitat no existeix.</p>
         <p><a class="btn" href="<?= url('inici') ?>">Torna a l'inici</a></p>
       </section>
-    <?php endif; ?>
+    <?php } ?>
   </main>
   <?php include __DIR__ . '/inc/footer.php'; ?>
   <script src="<?= asset('assets/js/app.js') ?>"></script>
