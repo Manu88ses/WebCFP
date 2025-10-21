@@ -16,7 +16,7 @@ $current = $pages[$slug] ?? null;
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= e(($current['title'] ?? '404') . ' — Centre de Formació') ?></title>
+  <title><?= e(($current['title'] ?? '404') . ' — Centre de Formació Professional') ?></title>
   <link rel="stylesheet" href="<?= asset('assets/css/app.css') ?>">
 </head>
 <body>
