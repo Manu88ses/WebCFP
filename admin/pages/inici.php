@@ -6,3 +6,9 @@
     <li><a class="btn" href="<?= url('benvingua') ?>">(demo) Enllaç trencat per veure 404</a></li>
   </ul>
 </section>
+
+<?php
+
+if ($_SERVER['REQUEST_METHOD'] =='POST' && isset($_POST['BotonLogin'])){
+  $login = trim($_POST['usuari']);
+}
