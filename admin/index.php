@@ -1,6 +1,7 @@
 
 <?php
 require __DIR__ . '/inc/functions.php';
+session_start();
 
 $pages = [
   'inici'      => ['title' => 'Inici',      'file' => __DIR__ . '/pages/inici.php'],
